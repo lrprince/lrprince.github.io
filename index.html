@@ -752,7 +752,7 @@
               <p>
                 UTF-32 simply encodes each code point in 32 bits (4 bytes), with at least 11 leading zero bits.
                 This makes decoding trivial at the expense of using 4 bytes for each character, no matter
-                how common. UTF-16 encodes most commonly-used code points as a single 16-bit value. All other
+                how common. UTF-16 encodes code points in the BMP as a single 16-bit value. All other
                 code points are encoded in two 16-bit values from a special range. UTF-16 is unpopular.
                 Which brings us to UTF-8.
               </p>
