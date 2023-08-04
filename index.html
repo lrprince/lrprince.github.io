@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html class="client-js vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-sticky-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-enabled vector-feature-main-menu-pinned-disabled vector-feature-limited-width-enabled vector-feature-limited-width-content-enabled vector-feature-zebra-design-disabled vector-animations-ready ve-available" lang="en" dir="ltr">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Character Encodings</title>
+  <link rel="stylesheet"  href="char_table.css">
+</head>
+
+<body class="skin-vector skin-vector-search-vue mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Control_Pictures rootpage-Control_Pictures skin-vector-2022 action-view uls-dialog-sticky-hide vector-below-page-title">
+  <div class="vector-header-container">
+    <header class="vector-header mw-header">
+      <!-- Page header stuff can go here, if any -->
+    </header>
+  </div>
+
+  <div class="mw-page-container">
+    <div class="mw-page-container-inner">
+      <input type="checkbox" id="vector-toc-collapsed-checkbox" class="vector-menu-checkbox">
+      <nav id="mw-panel-toc" role="navigation" aria-label="Contents"
+        data-event-name="ui.sidebar-toc"
+        class="mw-table-of-contents-container vector-toc-landmark vector-sticky-pinned-container">
+        <div id="vector-toc-pinned-container" class="vector-pinned-container">
+          <div id="vector-toc" class="vector-toc vector-pinnable-element">
+            <div class="vector-pinnable-header vector-toc-pinnable-header vector-pinnable-header-pinned"
+              data-feature-name="toc-pinned" data-pinnable-element-id="vector-toc">
+              <h2 class="vector-pinnable-header-label">&nbsp;<!-- Contents --></h2>
+                <!-- Add in-page links here?  -->
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="mw-content-container">
+        <main id="content" class="mw-body" role="main">
+          <header class="mw-body-header vector-page-titlebar">
+            <h1 id="firstHeading" class="firstHeading mw-first-heading">
+              <span class="mw-page-title-main">
+                Character Encodings
+              </span>
+            </h1>
+
+          </header>
+
+          <div id="bodyContent" class="vector-body ve-init-mw-desktopArticleTarget-targetContainer"
+            aria-labelledby="firstHeading" data-mw-ve-target-container="">
+
+            <div id="mw-content-text" class="mw-body-content mw-content-ltr"
+              lang="en" dir="ltr"><div class="mw-parser-output">
+              <p>
+                Encodings have been used since antiquity to transmit information across distances. However,
+                in most cases the messages were simple or the distances were short, or both. More capable
+                systems were developed and deployed as technology permitted. Notably, the French Chappe
+                optical telegraph, in the early 1790s, used a rooftop apparatus viewed from afar with a
+                telescope and could transmit 98 distinct symbols. But these were used to code entire words
+                by using two symbols, one to choose a code book page and another a word on that page.
+              </p>
+              <p>
+                Inventors had, from time to time, proposed telegraph systems that
+                encoded individual characters, but the first commercially successful system
+                was the electrical telegraph by the Americans Morse and Vail, which, unlike earlier
+                systems, used only a single wire between stations. In 1844 their system connected
+                Baltimore and Washington, and by 1861 it reached the west coast.
+              </p>
+
+              <h2><span class="mw-headline">Morse Code</span></h2>
+              <p>
+                Morse code was developed by Samuel Morse and Alfred Vail and encoded individual
+                letters. The codes were chosen based on the frequency of letters in English
+                text, estimated by the relative counts in the type-cases of a newspaper.
+              </p>
+              <table class="wikitable"
+                style="border-collapse:collapse;background:#FFFFFF;font-size:large;text-align:center">
+                <tbody>
+                  <tr>
+                    <td colspan="8" style="background:#F8F8F8;font-size:small">
+                      <b>
+                        <a class="mw-selflink selflink">Morse Code</a>
+                      </b>
+                      <br>
+                        <a class="mw-selflink selflink">Source: Rec. ITU-R M.1677-1 (10/2009) Annex 1</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">A</td>
+                    <td style="width:70pt;">&#x00B7;&nbsp;&#x2212;</td>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">M</td>
+                    <td style="width:70pt;">&#x2212;&nbsp;&#x2212;</td>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">Y</td>
+                    <td style="width:70pt;">&#x2212;&nbsp;&#x00B7;&nbsp;&#x2212;&nbsp;&#x2212;</td>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">.</td>
+                    <td style="width:70pt;">&#x00B7;&nbsp;&#x2212;&nbsp;&#x00B7;&nbsp;&#x2212;&nbsp;&#x00B7;&nbsp;&#x2212;</td>
+                  </tr>
+                  <tr>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">B</td>
+                    <td style="width:20pt;">&#x2212;&nbsp;&#x00B7;&nbsp;&#x00B7;&nbsp;&#x00B7;</td>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">N</td>
+                    <td style="width:20pt;">&#x2212;&nbsp;&#x00B7;</td>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">Z</td>
+                    <td style="width:20pt;">&#x2212;&nbsp;&#x2212;&nbsp;&#x00B7;&nbsp;&#x00B7;</td>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">,</td>
+                    <td style="width:20pt;">&#x2212;&nbsp;&#x2212;&nbsp;&#x00B7;&nbsp;&#x00B7;&nbsp;&#x2212;&nbsp;&#x2212;</td>
+                  </tr>
+                  <tr>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">C</td>
+                    <td style="width:20pt;">&#x2212;&nbsp;&#x00B7;&nbsp;&#x2212;&nbsp;&#x00B7;</td>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">O</td>
+                    <td style="width:20pt;">&#x2212;&nbsp;&#x2212;&nbsp;&#x2212;</td>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">1</td>
+                    <td style="width:20pt;">&#x00B7;&nbsp;&#x2212;&nbsp;&#x2212;&nbsp;&#x2212;&nbsp;&#x2212;</td>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">:</td>
+                    <td style="width:20pt;">&#x2212;&nbsp;&#x2212;&nbsp;&#x2212;&nbsp;&#x00B7;&nbsp;&#x00B7;&nbsp;&#x00B7;</td>
+                  </tr>
+                  <tr>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">D</td>
+                    <td style="width:20pt;">&#x2212;&nbsp;&#x00B7;&nbsp;&#x00B7;</td>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">P</td>
+                    <td style="width:20pt;">&#x00B7;&nbsp;&#x2212;&nbsp;&#x2212;&nbsp;&#x00B7;</td>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">2</td>
+                    <td style="width:20pt;">&#x00B7;&nbsp;&#x00B7;&nbsp;&#x2212;&nbsp;&#x2212;&nbsp;&#x2212;</td>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">?</td>
+                    <td style="width:20pt;">&#x2212;&nbsp;&#x2212;&nbsp;&#x00B7;&nbsp;&#x00B7;&nbsp;&#x2212;&nbsp;&#x2212;</td>
+                  </tr>
+                  <tr>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">E</td>
+                    <td style="width:20pt;">&#x00B7;</td>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">Q</td>
+                    <td style="width:20pt;">&#x2212;&nbsp;&#x2212;&nbsp;&#x00B7;&nbsp;&#x2212;</td>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">3</td>
+                    <td style="width:20pt;">&#x00B7;&nbsp;&#x00B7;&nbsp;&#x00B7;&nbsp;&#x2212;&nbsp;&#x2212;</td>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">'</td>
+                    <td style="width:20pt;">&#x00B7;&nbsp;&#x2212;&nbsp;&#x2212;&nbsp;&#x2212;&nbsp;&#x2212;&nbsp;&#x00B7;</td>
+                  </tr>
+                  <tr>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">F</td>
+                    <td style="width:20pt;">&#x00B7;&nbsp;&#x00B7;&nbsp;&#x2212;&nbsp;&#x00B7;</td>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">R</td>
+                    <td style="width:20pt;">&#x00B7;&nbsp;&#x2212;&nbsp;&#x00B7;</td>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">4</td>
+                    <td style="width:20pt;">&#x00B7;&nbsp;&#x00B7;&nbsp;&#x00B7;&nbsp;&#x00B7;&nbsp;&#x2212;</td>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">-</td>
+                    <td style="width:20pt;">&#x2212;&nbsp;&#x00B7;&nbsp;&#x00B7;&nbsp;&#x00B7;&nbsp;&#x00B7;&nbsp;&#x2212;</td>
+                  </tr>
+                  <tr>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">G</td>
+                    <td style="width:20pt;">&#x2212;&nbsp;&#x2212;&nbsp;&#x00B7;</td>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">S</td>
+                    <td style="width:20pt;">&#x00B7;&nbsp;&#x00B7;&nbsp;&#x00B7;</td>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">5</td>
+                    <td style="width:20pt;">&#x00B7;&nbsp;&#x00B7;&nbsp;&#x00B7;&nbsp;&#x00B7;&nbsp;&#x00B7;</td>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">/</td>
+                    <td style="width:20pt;">&#x2212;&nbsp;&#x00B7;&nbsp;&#x00B7;&nbsp;&#x2212;&nbsp;&#x00B7;</td>
+                  </tr>
+                  <tr>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">H</td>
+                    <td style="width:20pt;">&#x00B7;&nbsp;&#x00B7;&nbsp;&#x00B7;&nbsp;&#x00B7;</td>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">T</td>
+                    <td style="width:20pt;">&#x2212;</td>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">6</td>
+                    <td style="width:20pt;">&#x2212;&nbsp;&#x00B7;&nbsp;&#x00B7;&nbsp;&#x00B7;&nbsp;&#x00B7;</td>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">(</td>
+                    <td style="width:20pt;">&#x2212;&nbsp;&#x00B7;&nbsp;&#x2212;&nbsp;&#x2212;&nbsp;&#x00B7;</td>
+                  </tr>
+                  <tr>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">I</td>
+                    <td style="width:20pt;">&#x00B7;&nbsp;&#x00B7;</td>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">U</td>
+                    <td style="width:20pt;">&#x00B7;&nbsp;&#x00B7;&nbsp;&#x2212;</td>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">7</td>
+                    <td style="width:20pt;">&#x2212;&nbsp;&#x2212;&nbsp;&#x00B7;&nbsp;&#x00B7;&nbsp;&#x00B7;</td>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">)</td>
+                    <td style="width:20pt;">&#x2212;&nbsp;&#x00B7;&nbsp;&#x2212;&nbsp;&#x2212;&nbsp;&#x00B7;&nbsp;&#x2212;</td>
+                  </tr>
+                  <tr>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">J</td>
+                    <td style="width:20pt;">&#x00B7;&nbsp;&#x2212;&nbsp;&#x2212;&nbsp;&#x2212;</td>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">V</td>
+                    <td style="width:20pt;">&#x00B7;&nbsp;&#x00B7;&nbsp;&#x00B7;&nbsp;&#x2212;</td>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">8</td>
+                    <td style="width:20pt;">&#x2212;&nbsp;&#x2212;&nbsp;&#x2212;&nbsp;&#x00B7;&nbsp;&#x00B7;</td>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">"</td>
+                    <td style="width:20pt;">&#x00B7;&nbsp;&#x2212;&nbsp;&#x00B7;&nbsp;&#x00B7;&nbsp;&#x2212;&nbsp;&#x00B7;</td>
+                  </tr>
+                  <tr>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">K</td>
+                    <td style="width:20pt;">&#x2212;&nbsp;&#x00B7;&nbsp;&#x2212;</td>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">W</td>
+                    <td style="width:20pt;">&#x00B7;&nbsp;&#x2212;&nbsp;&#x2212;</td>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">9</td>
+                    <td style="width:20pt;">&#x2212;&nbsp;&#x2212;&nbsp;&#x2212;&nbsp;&#x2212;&nbsp;&#x00B7;</td>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">=</td>
+                    <td style="width:20pt;">&#x2212;&nbsp;&#x00B7;&nbsp;&#x00B7;&nbsp;&#x00B7;&nbsp;&#x2212;</td>
+                  </tr>
+                  <tr>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">L</td>
+                    <td style="width:20pt;">&#x00B7;&nbsp;&#x2212;&nbsp;&#x00B7;&nbsp;&#x00B7;</td>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">X</td>
+                    <td style="width:20pt;">&#x2212;&nbsp;&#x00B7;&nbsp;&#x00B7;&nbsp;&#x2212;</td>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">0</td>
+                    <td style="width:20pt;">&#x2212;&nbsp;&#x2212;&nbsp;&#x2212;&nbsp;&#x2212;&nbsp;&#x2212;</td>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">+</td>
+                    <td style="width:20pt;">&#x00B7;&nbsp;&#x2212;&nbsp;&#x00B7;&nbsp;&#x2212;&nbsp;&#x00B7;</td>
+                  </tr>
+
+                  <tr>
+                    <td colspan="8" style="background:#F8F8F8;font-size:small;text-align:left">
+                      <dl>
+                        <dd>Miscellaneous signs (control codes) and accented E omitted.</dd>
+                      </dl>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+
+              <p>
+                Morse code is efficient for trained human operators, but it was difficult to automate.
+              </p>
+
+              <figure class="mw-halign-center" typeof="mw:File/Frame">
+                <a href="" class="mw-file-description">
+                  <img src="640px-Wallace_Study-Telegraph.jpg" class="mw-file-element" width="500">
+                </a>
+                <figcaption>
+                  Morse telegraph key (Hp.Baumeler, CC BY-SA 4.0, via Wikimedia Commons)
+                </figcaption>
+              </figure>
+
+
+              <h2><span class="mw-headline">ITA 2</span></h2>
+
+              <p>
+                The ITA 2 telegraph standard replaced the variable length codes of Morse Code with a fixed-size 5-bit
+                encoding. But since 5 bits aren't enough for all the characters users wanted, two &ldquo;control
+                codes&rdquo; were used that shifted between &ldquo;Letters&rdquo; and &ldquo;Figures&rdquo;,
+                as well as other control codes to perform operations on the receiving teletype like &ldquo;carriage
+                return&rdquo; and &ldquo;line feed&rdquo;, which may sound familiar.
+              </p>
+
+              <figure class="mw-halign-center" typeof="mw:File/Frame">
+                <a href="" class="mw-file-description">
+                  <img src="International_Telegraph_Alphabet_2_brightened.jpg" class="mw-file-element" width="779">
+                </a>
+                <figcaption>
+                  A British version of ITU-2 (User:Huestones with derivative work by User:TedColes, CC BY-SA 3.0 via Wikimedia Commons)
+                </figcaption>
+              </figure>
+
+              <p>
+                The code was also organized to spread the hole punches around to reduce and even out wear on
+                electromechanical parts. So the letters were not in the same order as the code points. Note that
+                the letters <tt>E</tt> and <tt>T</tt> require one
+                hole and other common letters like <tt>AOINSRL</tt>
+                take just two holes. The less common letters <tt>K</tt>,
+                <tt>Q</tt>, <tt>V</tt>, and <tt>X</tt>
+                have four holes punched.
+              </p>
+
+              <figure class="mw-halign-center" typeof="mw:File/Frame">
+                <a href="" class="mw-file-description">
+                  <img src="PaperTapes-5and8Hole.jpg" class="mw-file-element" width="500">
+                </a>
+                <figcaption>
+                  Paper tape with 5 and 8 holes. The small holes are for a sprocket and don't hold data. (via Wikimedia Commons)
+                </figcaption>
+              </figure>
+
+              <p>
+                All zeros (no holes punched) is a Null character while all holes punched indicates a
+                shift to Letters, and also Erase or Delete because punching all the holes is a way to
+                correct errors. These uses have continued ever since.
+              </p>
+
+              <h2><span class="mw-headline">ASCII</span></h2>
+
+              <p>
+                ASCII, first introduced in 1963, was well suited to a world with 8-bit bytes, which were used
+                by IBM's System 360 series in 1964 and then rapidly became universal. On 8-hole punched tape,
+                the 8th bit could be used to store a parity bit for error detection. When stored in memory,
+                where no error detection was needed, the high bit was typically set to zero.
+              </p>
+
+              <table class="wikitable"
+                style="border-collapse:collapse;background:#FFFFFF;font-size:large;text-align:center">
+                <tbody>
+                  <tr>
+                    <td colspan="17" style="background:#F8F8F8;font-size:small">
+                      <b>
+                        <a class="mw-selflink selflink">ASCII (1977/1986 Revisions)</a>
+                      </b>
+                      <br>
+                        <a class="mw-selflink selflink">&nbsp;</a>
+                    </td>
+                  </tr>
+
+                  <tr style="background:#F8F8F8;font-size:small;">
+                    <td style="width:30pt;"></td>
+                    <td style="width:20pt;">0</td>
+                    <td style="width:20pt;">1</td>
+                    <td style="width:20pt;">2</td>
+                    <td style="width:20pt;">3</td>
+                    <td style="width:20pt;">4</td>
+                    <td style="width:20pt;">5</td>
+                    <td style="width:20pt;">6</td>
+                    <td style="width:20pt;">7</td>
+                    <td style="width:20pt;">8</td>
+                    <td style="width:20pt;">9</td>
+                    <td style="width:20pt;">A</td>
+                    <td style="width:20pt;">B</td>
+                    <td style="width:20pt;">C</td>
+                    <td style="width:20pt;">D</td>
+                    <td style="width:20pt;">E</td>
+                    <td style="width:20pt;">F</td>
+                  </tr>
+                  <tr>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">0x</td>
+                    <td style="width:20pt;">&#x2400;</td>
+                    <td style="width:20pt;">&#x2401;</td>
+                    <td style="width:20pt;">&#x2402;</td>
+                    <td style="width:20pt;">&#x2403;</td>
+                    <td style="width:20pt;">&#x2404;</td>
+                    <td style="width:20pt;">&#x2405;</td>
+                    <td style="width:20pt;">&#x2406;</td>
+                    <td style="width:20pt;">&#x2407;</td>
+                    <td style="width:20pt;">&#x2408;</td>
+                    <td style="width:20pt;">&#x2409;</td>
+                    <td style="width:20pt;">&#x240a;</td>
+                    <td style="width:20pt;">&#x240b;</td>
+                    <td style="width:20pt;">&#x240c;</td>
+                    <td style="width:20pt;">&#x240d;</td>
+                    <td style="width:20pt;">&#x240e;</td>
+                    <td style="width:20pt;">&#x240f;</td>
+                  </tr>
+                  <tr>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">1x</td>
+                    <td style="width:20pt;">&#x2410;</td>
+                    <td style="width:20pt;">&#x2411;</td>
+                    <td style="width:20pt;">&#x2412;</td>
+                    <td style="width:20pt;">&#x2413;</td>
+                    <td style="width:20pt;">&#x2414;</td>
+                    <td style="width:20pt;">&#x2415;</td>
+                    <td style="width:20pt;">&#x2416;</td>
+                    <td style="width:20pt;">&#x2417;</td>
+                    <td style="width:20pt;">&#x2418;</td>
+                    <td style="width:20pt;">&#x2419;</td>
+                    <td style="width:20pt;">&#x241a;</td>
+                    <td style="width:20pt;">&#x241b;</td>
+                    <td style="width:20pt;">&#x241c;</td>
+                    <td style="width:20pt;">&#x241d;</td>
+                    <td style="width:20pt;">&#x241e;</td>
+                    <td style="width:20pt;">&#x241f;</td>
+                  </tr>
+                  <tr>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">2x</td>
+                    <td style="width:20pt;">&#x2420;</td>
+                    <td style="width:20pt;">&#x21;</td>
+                    <td style="width:20pt;">&#x22;</td>
+                    <td style="width:20pt;">&#x23;</td>
+                    <td style="width:20pt;">&#x24;</td>
+                    <td style="width:20pt;">&#x25;</td>
+                    <td style="width:20pt;">&#x26;</td>
+                    <td style="width:20pt;">&#x27;</td>
+                    <td style="width:20pt;">&#x28;</td>
+                    <td style="width:20pt;">&#x29;</td>
+                    <td style="width:20pt;">&#x2a;</td>
+                    <td style="width:20pt;">&#x2b;</td>
+                    <td style="width:20pt;">&#x2c;</td>
+                    <td style="width:20pt;">&#x2d;</td>
+                    <td style="width:20pt;">&#x2e;</td>
+                    <td style="width:20pt;">&#x2f;</td>
+                  </tr>
+                  <tr>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">3x</td>
+                    <td style="width:20pt;">&#x30;</td>
+                    <td style="width:20pt;">&#x31;</td>
+                    <td style="width:20pt;">&#x32;</td>
+                    <td style="width:20pt;">&#x33;</td>
+                    <td style="width:20pt;">&#x34;</td>
+                    <td style="width:20pt;">&#x35;</td>
+                    <td style="width:20pt;">&#x36;</td>
+                    <td style="width:20pt;">&#x37;</td>
+                    <td style="width:20pt;">&#x38;</td>
+                    <td style="width:20pt;">&#x39;</td>
+                    <td style="width:20pt;">&#x3a;</td>
+                    <td style="width:20pt;">&#x3b;</td>
+                    <td style="width:20pt;">&#x3c;</td>
+                    <td style="width:20pt;">&#x3d;</td>
+                    <td style="width:20pt;">&#x3e;</td>
+                    <td style="width:20pt;">&#x3f;</td>
+                  </tr>
+                  <tr>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">4x</td>
+                    <td style="width:20pt;">&#x40;</td>
+                    <td style="width:20pt;">&#x41;</td>
+                    <td style="width:20pt;">&#x42;</td>
+                    <td style="width:20pt;">&#x43;</td>
+                    <td style="width:20pt;">&#x44;</td>
+                    <td style="width:20pt;">&#x45;</td>
+                    <td style="width:20pt;">&#x46;</td>
+                    <td style="width:20pt;">&#x47;</td>
+                    <td style="width:20pt;">&#x48;</td>
+                    <td style="width:20pt;">&#x49;</td>
+                    <td style="width:20pt;">&#x4a;</td>
+                    <td style="width:20pt;">&#x4b;</td>
+                    <td style="width:20pt;">&#x4c;</td>
+                    <td style="width:20pt;">&#x4d;</td>
+                    <td style="width:20pt;">&#x4e;</td>
+                    <td style="width:20pt;">&#x4f;</td>
+                  </tr>
+                  <tr>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">5x</td>
+                    <td style="width:20pt;">&#x50;</td>
+                    <td style="width:20pt;">&#x51;</td>
+                    <td style="width:20pt;">&#x52;</td>
+                    <td style="width:20pt;">&#x53;</td>
+                    <td style="width:20pt;">&#x54;</td>
+                    <td style="width:20pt;">&#x55;</td>
+                    <td style="width:20pt;">&#x56;</td>
+                    <td style="width:20pt;">&#x57;</td>
+                    <td style="width:20pt;">&#x58;</td>
+                    <td style="width:20pt;">&#x59;</td>
+                    <td style="width:20pt;">&#x5a;</td>
+                    <td style="width:20pt;">&#x5b;</td>
+                    <td style="width:20pt;">&#x5c;</td>
+                    <td style="width:20pt;">&#x5d;</td>
+                    <td style="width:20pt;">&#x5e;</td>
+                    <td style="width:20pt;">&#x5f;</td>
+                  </tr>
+                  <tr>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">6x</td>
+                    <td style="width:20pt;">&#x60;</td>
+                    <td style="width:20pt;">&#x61;</td>
+                    <td style="width:20pt;">&#x62;</td>
+                    <td style="width:20pt;">&#x63;</td>
+                    <td style="width:20pt;">&#x64;</td>
+                    <td style="width:20pt;">&#x65;</td>
+                    <td style="width:20pt;">&#x66;</td>
+                    <td style="width:20pt;">&#x67;</td>
+                    <td style="width:20pt;">&#x68;</td>
+                    <td style="width:20pt;">&#x69;</td>
+                    <td style="width:20pt;">&#x6a;</td>
+                    <td style="width:20pt;">&#x6b;</td>
+                    <td style="width:20pt;">&#x6c;</td>
+                    <td style="width:20pt;">&#x6d;</td>
+                    <td style="width:20pt;">&#x6e;</td>
+                    <td style="width:20pt;">&#x6f;</td>
+                  </tr>
+                  <tr>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">7x</td>
+                    <td style="width:20pt;">&#x70;</td>
+                    <td style="width:20pt;">&#x71;</td>
+                    <td style="width:20pt;">&#x72;</td>
+                    <td style="width:20pt;">&#x73;</td>
+                    <td style="width:20pt;">&#x74;</td>
+                    <td style="width:20pt;">&#x75;</td>
+                    <td style="width:20pt;">&#x76;</td>
+                    <td style="width:20pt;">&#x77;</td>
+                    <td style="width:20pt;">&#x78;</td>
+                    <td style="width:20pt;">&#x79;</td>
+                    <td style="width:20pt;">&#x7a;</td>
+                    <td style="width:20pt;">&#x7b;</td>
+                    <td style="width:20pt;">&#x7c;</td>
+                    <td style="width:20pt;">&#x7d;</td>
+                    <td style="width:20pt;">&#x7e;</td>
+                    <td style="width:20pt;">&#x2421;</td>
+                  </tr>
+
+
+                  <tr>
+                    <td colspan="17" style="background:#F8F8F8;font-size:small;text-align:left">
+                      <dl>
+                        <dd>&nbsp;</dd>
+                      </dl>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p>
+                Microcomputer makers of the 1970s made various ASCII extensions that used the high 128 values
+                of a byte, and sometimes the nonprintable ASCII code points for various purposes like line and
+                box drawing characters for simple graphical user interfaces, accented letters, computer games,
+                etc.
+              </p>
+
+              <figure class="mw-halign-center" typeof="mw:File/Frame">
+                <a href="" class="mw-file-description">
+                  <img src="Codepage-437.png" class="mw-file-element" width="304">
+                </a>
+                <figcaption>
+                  IBM PC Personal Computer Character Set. Note smileys, playing card suits, etc. (via Wikimedia Commons)
+                </figcaption>
+              </figure>
+
+              <p>
+                In 1987 ISO attempted to standardize some of this. That resulted in ISO/IEC 8859-1 (Usually shortened
+                to ISO-8859-1) and other similar character sets, including Windows-1252. These added support for
+                various western languages' accented characters and punctuation.
+              </p>
+
+              <table class="wikitable"
+                style="border-collapse:collapse;background:#FFFFFF;font-size:large;text-align:center">
+                <tbody>
+                  <tr>
+                    <td colspan="17" style="background:#F8F8F8;font-size:small">
+                      <b>
+                        <a class="mw-selflink selflink">ISO-8859-1</a>
+                      </b>
+                      <br>
+                        <a class="mw-selflink selflink">Later became Unicode C1 Controls and Latin-1 Supplement</a>
+                    </td>
+                  </tr>
+
+                  <tr style="background:#F8F8F8;font-size:small;">
+                    <td style="width:30pt;"></td>
+                    <td style="width:20pt;">0</td>
+                    <td style="width:20pt;">1</td>
+                    <td style="width:20pt;">2</td>
+                    <td style="width:20pt;">3</td>
+                    <td style="width:20pt;">4</td>
+                    <td style="width:20pt;">5</td>
+                    <td style="width:20pt;">6</td>
+                    <td style="width:20pt;">7</td>
+                    <td style="width:20pt;">8</td>
+                    <td style="width:20pt;">9</td>
+                    <td style="width:20pt;">A</td>
+                    <td style="width:20pt;">B</td>
+                    <td style="width:20pt;">C</td>
+                    <td style="width:20pt;">D</td>
+                    <td style="width:20pt;">E</td>
+                    <td style="width:20pt;">F</td>
+                  </tr>
+
+
+                  <tr>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">8x</td>
+                   <td title="Reserved" style="background-color:#CCCCCC;">&nbsp;</td>
+                   <td title="Reserved" style="background-color:#CCCCCC;"></td>
+                   <td title="Reserved" style="background-color:#CCCCCC;"></td>
+                   <td title="Reserved" style="background-color:#CCCCCC;"></td>
+                   <td title="Reserved" style="background-color:#CCCCCC;"></td>
+                   <td title="Reserved" style="background-color:#CCCCCC;"></td>
+                   <td title="Reserved" style="background-color:#CCCCCC;"></td>
+                   <td title="Reserved" style="background-color:#CCCCCC;"></td>
+                   <td title="Reserved" style="background-color:#CCCCCC;"></td>
+                   <td title="Reserved" style="background-color:#CCCCCC;"></td>
+                   <td title="Reserved" style="background-color:#CCCCCC;"></td>
+                   <td title="Reserved" style="background-color:#CCCCCC;"></td>
+                   <td title="Reserved" style="background-color:#CCCCCC;"></td>
+                   <td title="Reserved" style="background-color:#CCCCCC;"></td>
+                   <td title="Reserved" style="background-color:#CCCCCC;"></td>
+                   <td title="Reserved" style="background-color:#CCCCCC;"></td>
+                  </tr>
+                  <tr>
+                  <td style="width:30pt;background:#F8F8F8;font-size:small;">9x</td>
+                   <td title="Reserved" style="background-color:#CCCCCC;">&nbsp;</td>
+                   <td title="Reserved" style="background-color:#CCCCCC;"></td>
+                   <td title="Reserved" style="background-color:#CCCCCC;"></td>
+                   <td title="Reserved" style="background-color:#CCCCCC;"></td>
+                   <td title="Reserved" style="background-color:#CCCCCC;"></td>
+                   <td title="Reserved" style="background-color:#CCCCCC;"></td>
+                   <td title="Reserved" style="background-color:#CCCCCC;"></td>
+                   <td title="Reserved" style="background-color:#CCCCCC;"></td>
+                   <td title="Reserved" style="background-color:#CCCCCC;"></td>
+                   <td title="Reserved" style="background-color:#CCCCCC;"></td>
+                   <td title="Reserved" style="background-color:#CCCCCC;"></td>
+                   <td title="Reserved" style="background-color:#CCCCCC;"></td>
+                   <td title="Reserved" style="background-color:#CCCCCC;"></td>
+                   <td title="Reserved" style="background-color:#CCCCCC;"></td>
+                   <td title="Reserved" style="background-color:#CCCCCC;"></td>
+                   <td title="Reserved" style="background-color:#CCCCCC;"></td>
+                  </tr>
+                  <tr>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">10x</td>
+                   <td title="Reserved" style="background-color:#CCCCCC;"></td>
+                    <td style="width:20pt;">&#xa1;</td>
+                    <td style="width:20pt;">&#xa2;</td>
+                    <td style="width:20pt;">&#xa3;</td>
+                    <td style="width:20pt;">&#xa4;</td>
+                    <td style="width:20pt;">&#xa5;</td>
+                    <td style="width:20pt;">&#xa6;</td>
+                    <td style="width:20pt;">&#xa7;</td>
+                    <td style="width:20pt;">&#xa8;</td>
+                    <td style="width:20pt;">&#xa9;</td>
+                    <td style="width:20pt;">&#xaa;</td>
+                    <td style="width:20pt;">&#xab;</td>
+                    <td style="width:20pt;">&#xac;</td>
+                   <td title="Reserved" style="background-color:#CCCCCC;"></td>
+                    <td style="width:20pt;">&#xae;</td>
+                    <td style="width:20pt;">&#xaf;</td>
+                  </tr>                  <tr>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">11x</td>
+                    <td style="width:20pt;">&#xb0;</td>
+                    <td style="width:20pt;">&#xb1;</td>
+                    <td style="width:20pt;">&#xb2;</td>
+                    <td style="width:20pt;">&#xb3;</td>
+                    <td style="width:20pt;">&#xb4;</td>
+                    <td style="width:20pt;">&#xb5;</td>
+                    <td style="width:20pt;">&#xb6;</td>
+                    <td style="width:20pt;">&#xb7;</td>
+                    <td style="width:20pt;">&#xb8;</td>
+                    <td style="width:20pt;">&#xb9;</td>
+                    <td style="width:20pt;">&#xba;</td>
+                    <td style="width:20pt;">&#xbb;</td>
+                    <td style="width:20pt;">&#xbc;</td>
+                    <td style="width:20pt;">&#xbd;</td>
+                    <td style="width:20pt;">&#xbe;</td>
+                    <td style="width:20pt;">&#xbf;</td>
+                  </tr>
+                  <tr>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">12x</td>
+                    <td style="width:20pt;">&#xc0;</td>
+                    <td style="width:20pt;">&#xc1;</td>
+                    <td style="width:20pt;">&#xc2;</td>
+                    <td style="width:20pt;">&#xc3;</td>
+                    <td style="width:20pt;">&#xc4;</td>
+                    <td style="width:20pt;">&#xc5;</td>
+                    <td style="width:20pt;">&#xc6;</td>
+                    <td style="width:20pt;">&#xc7;</td>
+                    <td style="width:20pt;">&#xc8;</td>
+                    <td style="width:20pt;">&#xc9;</td>
+                    <td style="width:20pt;">&#xca;</td>
+                    <td style="width:20pt;">&#xcb;</td>
+                    <td style="width:20pt;">&#xcc;</td>
+                    <td style="width:20pt;">&#xcd;</td>
+                    <td style="width:20pt;">&#xce;</td>
+                    <td style="width:20pt;">&#xcf;</td>
+                  </tr>
+                  <tr>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">13x</td>
+                    <td style="width:20pt;">&#xd0;</td>
+                    <td style="width:20pt;">&#xd1;</td>
+                    <td style="width:20pt;">&#xd2;</td>
+                    <td style="width:20pt;">&#xd3;</td>
+                    <td style="width:20pt;">&#xd4;</td>
+                    <td style="width:20pt;">&#xd5;</td>
+                    <td style="width:20pt;">&#xd6;</td>
+                    <td style="width:20pt;">&#xd7;</td>
+                    <td style="width:20pt;">&#xd8;</td>
+                    <td style="width:20pt;">&#xd9;</td>
+                    <td style="width:20pt;">&#xda;</td>
+                    <td style="width:20pt;">&#xdb;</td>
+                    <td style="width:20pt;">&#xdc;</td>
+                    <td style="width:20pt;">&#xdd;</td>
+                    <td style="width:20pt;">&#xde;</td>
+                    <td style="width:20pt;">&#xdf;</td>
+                  </tr>
+                  <tr>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">14x</td>
+                    <td style="width:20pt;">&#xe0;</td>
+                    <td style="width:20pt;">&#xe1;</td>
+                    <td style="width:20pt;">&#xe2;</td>
+                    <td style="width:20pt;">&#xe3;</td>
+                    <td style="width:20pt;">&#xe4;</td>
+                    <td style="width:20pt;">&#xe5;</td>
+                    <td style="width:20pt;">&#xe6;</td>
+                    <td style="width:20pt;">&#xe7;</td>
+                    <td style="width:20pt;">&#xe8;</td>
+                    <td style="width:20pt;">&#xe9;</td>
+                    <td style="width:20pt;">&#xea;</td>
+                    <td style="width:20pt;">&#xeb;</td>
+                    <td style="width:20pt;">&#xec;</td>
+                    <td style="width:20pt;">&#xed;</td>
+                    <td style="width:20pt;">&#xee;</td>
+                    <td style="width:20pt;">&#xef;</td>
+                  </tr>
+                  <tr>
+                    <td style="width:30pt;background:#F8F8F8;font-size:small;">15x</td>
+                    <td style="width:20pt;">&#xf0;</td>
+                    <td style="width:20pt;">&#xf1;</td>
+                    <td style="width:20pt;">&#xf2;</td>
+                    <td style="width:20pt;">&#xf3;</td>
+                    <td style="width:20pt;">&#xf4;</td>
+                    <td style="width:20pt;">&#xf5;</td>
+                    <td style="width:20pt;">&#xf6;</td>
+                    <td style="width:20pt;">&#xf7;</td>
+                    <td style="width:20pt;">&#xf8;</td>
+                    <td style="width:20pt;">&#xf9;</td>
+                    <td style="width:20pt;">&#xfa;</td>
+                    <td style="width:20pt;">&#xfb;</td>
+                    <td style="width:20pt;">&#xfc;</td>
+                    <td style="width:20pt;">&#xfd;</td>
+                    <td style="width:20pt;">&#xfe;</td>
+                    <td style="width:20pt;">&#xff;</td>
+                  </tr>
+
+                  <tr>
+                    <td colspan="17" style="background:#F8F8F8;font-size:small;text-align:left">
+                      <dl>
+                        <dd>
+                          Gray areas indicate (except 0xA0 and 0xAD) undefined codes in ISO/IEC 8859-1.
+                          These became Unicode C1 controls
+                        </dd>
+                      </dl>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p>
+                But 8 bits is still not enough to encode all the characters users wanted. Which
+                leads us to Unicode.
+              </p>
+
+              <h2><span class="mw-headline">Unicode</span></h2>
+              <p>
+                Development of Unicode started in the late 1980s and initially envisioned a 16-bit code,
+                which would be sufficient to encode characters published in modern text.
+              </p>
+              <p>
+                In the original 16-bit Unicode, the first 256 code points were taken from ISO-8859-1.
+              </p>
+              <p>
+                A 16-bit code still wasn't enough, though, so with Unicode 2.0 in 1996, support was added
+                for over a million code points. Including, these days, various emoji. A &ldquo;code point&rdquo;
+                is often a character, but the standard allows for the use of separate code points with
+                combining characters, such as diacritical marks to add to letters or skin color modifiers
+                to change the appearance of human emojis.
+              </p>
+              <p>
+                Obviously most of these codes are not used in any given document, so it would be hugely
+                wasteful to store the code points themselves.
+              </p>
+              <p>
+                Instead, various Unicode Transformation Formats were developed, including UTF-8, UTF-16, and
+                UTF-32.
+              </p>
+              <p>
+                UTF-32 encodes each code point in 32 bits (4 bytes), with at least 11 leading zero bits. This
+                greatly simplifies decoding at the expense of using 4 bytes for each character, no matter
+                how common. UTF-16 encodes most commonly-used code points as a single 16-bit value. All other
+                code points are encoded in two 16-bit values. UTF-16 is unpopular. Which brings us to UTF-8.
+              </p>
+              <h2><span class="mw-headline">UTF-8</span></h2>
+
+              <p>
+                UTF-8, however, is by far the most popular transformation format. It has been implemented in
+                all major operating systems available today. It has various advantages.
+                <ul>
+                  <li>It is 100% backward compatible with 7-bit ASCII (the first 128 Unicode code points).</li>
+                  <li>It is easy to synchronize by simply examining the high-order bits in a byte stream</li>
+                  <li>Encoding and decoding are relatively straightforward.</li>
+                </ul>
+
+                Encoding results in sequences of 1 to 4 bytes.
+                <ul>
+                  <li>The first 128 code points (corresponding to 7-bit ASCII) use 1 byte.</li>
+                  <li>A further 1,920 code points use 2 bytes.</li>
+                  <li>The remaining 61,440 code points on the &ldquo;Basic Multilingual Plane&rdquo; use 3 bytes.</li>
+                  <li>All other code points require 4 bytes.</li>
+                </ul>
+                It does have some minor disadvantages.
+                <ul>
+                  <li>As a variable length code it may be necessary to back up or skip forward between
+                    1 and 3 bytes to find the first byte of an encoded code point.
+                  </li>
+                  <li>It loses efficiency if code points outside the Basic Multilingual Plane are
+                    heavily used. Emojis, as an example, are in this category of code points.
+                  </li>
+                  <li>Not all byte sequences are valid UTF-8. Decoders must handle error conditions
+                    due to erroneous sequences such as unexpected continuation bytes, lack of an
+                    expected continuation byte, sequences that don't decode to valid Unicode
+                    code points, and so on.
+                  </li>
+                </ul>
+              </p>
+
+              <table class="wikitable"
+                style="border-collapse:collapse;background:#FFFFFF;font-size:large;text-align:center">
+                <tbody>
+                  <tr>
+                    <td colspan="6" style="background:#F8F8F8;font-size:small">
+                      <b>
+                        <a class="mw-selflink selflink">Conversion between Code Point and UTF-8</a>
+                      </b>
+                    </td>
+                  </tr>
+                  <tr style="background:#F8F8F8;font-size:small">
+                    <td style="width:65pt">First code point</td>
+                    <td style="width:64pt">Last code point</td>
+                    <td style="width:20pt">Byte 1</td>
+                    <td style="width:20pt">Byte 2</td>
+                    <td style="width:20pt">Byte 3</td>
+                    <td style="width:20pt">Byte 4</td>
+                  </tr>
+
+                  <tr>
+                    <td style="background:#F8F8F8;font-size:small">U+0000</td>
+                    <td style="background:#F8F8F8;font-size:small">U+007f</td>
+                    <td><tt>0xxxxxxx</tt></td>
+                    <td style="background-color:#CCCCCC;"></td>
+                    <td style="background-color:#CCCCCC;"></td>
+                    <td style="background-color:#CCCCCC;"></td>
+                  </tr>
+
+                  <tr>
+                    <td style="background:#F8F8F8;font-size:small">U+0080</td>
+                    <td style="background:#F8F8F8;font-size:small">U+07ff</td>
+                    <td><tt>110xxxxx</tt></td>
+                    <td><tt>10xxxxxx</tt></td>
+                    <td style="background-color:#CCCCCC;"></td>
+                    <td style="background-color:#CCCCCC;"></td>
+                  </tr>
+
+                  <tr>
+                    <td style="background:#F8F8F8;font-size:small">U+0800</td>
+                    <td style="background:#F8F8F8;font-size:small">U+ffff</td>
+                    <td><tt>1110xxxx</tt></td>
+                    <td><tt>10xxxxxx</tt></td>
+                    <td><tt>10xxxxxx</tt></td>
+                    <td style="background-color:#CCCCCC;"></td>
+                  </tr>                UTF-8, however, is by far the most popular transformation format. It has been implemented in
+                all major operating systems available today. It has various advantages.
+
+                    <td><tt>11110xxx</tt></td>
+                    <td><tt>10xxxxxx</tt></td>
+                    <td><tt>10xxxxxx</tt></td>
+                    <td><tt>10xxxxxx</tt></td>
+                  </tr>
+
+                  <tr>
+                    <td colspan="6" style="background:#F8F8F8;font-size:small;text-align:left">
+                      <dl>
+                        <dd>&nbsp;</dd>
+                      </dl>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p>
+                Bits are stored highest to lowest, with leading zeros if needed.
+                The first UTF-8 byte has the highest bits in the code point
+                and the last UTF-8 byte contains the lowest bits.</a>
+              </p>
+              <p>
+                When encoding Unicode code points to UTF-8, the encoder just checks
+                which of the four UTF-8 encodings to use based on the code point value.
+              </p>
+              <p>
+                When decoding UTF-8 to Unicode code points, the decoder knows what to do
+                by simply looking at the most significant bits in a UTF-8 byte.
+              </p>
+
+              <h2><span class="mw-headline">References</span></h2>
+              <p>
+                Most of this content was from various Wikipedia pages, including
+                <a href="https://en.wikipedia.org/wiki/ASCII">https://en.wikipedia.org/wiki/ASCII</a>,
+                <a href="https://en.wikipedia.org/wiki/UTF-8">https://en.wikipedia.org/wiki/Byte</a>.
+                <a href="https://en.wikipedia.org/wiki/Telegraph">https://en.wikipedia.org/wiki/Telegraph</a>,
+                <a href="https://en.wikipedia.org/wiki/Unicode">https://en.wikipedia.org/wiki/Unicode</a>,
+                <a href="https://en.wikipedia.org/wiki/UTF-8">https://en.wikipedia.org/wiki/UTF-8</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </main>
+
+</body></html>
