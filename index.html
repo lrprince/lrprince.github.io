@@ -35,7 +35,7 @@
           <header class="mw-body-header vector-page-titlebar">
             <h1 id="firstHeading" class="firstHeading mw-first-heading">
               <span class="mw-page-title-main">
-                Character Encodings
+                Character Encodings: ASCII, Unicode, and UTF-8
               </span>
             </h1>
 
@@ -48,25 +48,27 @@
               lang="en" dir="ltr"><div class="mw-parser-output">
               <p>
                 Encodings have been used since antiquity to transmit information across distances. However,
-                in most cases the messages were simple or the distances were short, or both. More capable
-                systems were developed and deployed as technology permitted. Notably, the French Chappe
-                optical telegraph, in the early 1790s, used a rooftop apparatus viewed from afar with a
-                telescope and could transmit 98 distinct symbols. But these were used to code entire words
-                by using two symbols, one to choose a code book page and another a word on that page.
+                in most cases the messages were simple or distances were short, or both. More capable
+                systems were developed and deployed as technology permitted. Notably, the Chappe
+                optical telegraph, used in France starting in the 1790s, used a rooftop apparatus
+                viewed from afar with a telescope and could transmit 98 distinct symbols. These were
+                used to code entire words by using two symbols, one to choose a code book page and another
+                to choose a word on that page.
               </p>
               <p>
                 Inventors had, from time to time, proposed telegraph systems that
                 encoded individual characters, but the first commercially successful system
-                was the electrical telegraph by the Americans Morse and Vail, which, unlike earlier
-                systems, used only a single wire between stations. In 1844 their system connected
-                Baltimore and Washington, and by 1861 it reached the west coast.
+                was the electrical telegraph by the American innovators Samuel Morse and Alfred Vail.
+                Unlike most earlier systems, it used only a single wire between stations. In 1844
+                their system connected Baltimore and Washington, and by 1861 the system reached the
+                west coast.
               </p>
 
               <h2><span class="mw-headline">Morse Code</span></h2>
               <p>
-                Morse code was developed by Samuel Morse and Alfred Vail and encoded individual
-                letters. The codes were chosen based on the frequency of letters in English
-                text, estimated by the relative counts in the type-cases of a newspaper.
+                Morse code was developed by Morse and Vail and encoded individual
+                characters. The codes were chosen based on the frequency of letters in English
+                text, estimated by the relative letter counts in the type-cases of a newspaper.
               </p>
               <table class="wikitable"
                 style="border-collapse:collapse;background:#FFFFFF;font-size:large;text-align:center">
@@ -212,10 +214,6 @@
                 </tbody>
               </table>
 
-              <p>
-                Morse code is efficient for trained human operators, but it was difficult to automate.
-              </p>
-
               <figure class="mw-halign-center" typeof="mw:File/Frame">
                 <a href="" class="mw-file-description">
                   <img src="640px-Wallace_Study-Telegraph.jpg" class="mw-file-element" width="500">
@@ -225,14 +223,24 @@
                 </figcaption>
               </figure>
 
-
               <h2><span class="mw-headline">ITA 2</span></h2>
 
               <p>
-                The ITA 2 telegraph standard replaced the variable length codes of Morse Code with a fixed-size 5-bit
-                encoding. But since 5 bits aren't enough for all the characters users wanted, two &ldquo;control
-                codes&rdquo; were used that shifted between &ldquo;Letters&rdquo; and &ldquo;Figures&rdquo;,
-                as well as other control codes to perform operations on the receiving teletype like &ldquo;carriage
+                The success of the telegraph led to efforts to lower the cost per message
+                to maximize the use of expensive telegraph lines. Various innovations were
+                developed to automate transmission and reception, increase transmission
+                speed, and multiplex multiple transmissions on a single telegraph wire.
+                One of these innovations, credited to &Egrave;mile Baudot, was the use of a
+                fixed-size code, later standardized as the ITA 2 telegraph standard.
+                Another was the use of punched paper tape to prepare messages in advance
+                for batched transmission.
+              </p>
+
+              <p>
+                The ITA 2 standard used a 5-bit encoding. But since 5 bits aren't enough for all the
+                characters users wanted, two &ldquo;control codes&rdquo; were used that shifted
+                between &ldquo;Letters&rdquo; and &ldquo;Figures&rdquo;. Other control
+                codes performed operations on the receiving teletype like &ldquo;carriage
                 return&rdquo; and &ldquo;line feed&rdquo;, which may sound familiar.
               </p>
 
@@ -246,13 +254,12 @@
               </figure>
 
               <p>
-                The code was also organized to spread the hole punches around to reduce and even out wear on
-                electromechanical parts. So the letters were not in the same order as the code points. Note that
-                the letters <tt>E</tt> and <tt>T</tt> require one
-                hole and other common letters like <tt>AOINSRL</tt>
-                take just two holes. The less common letters <tt>K</tt>,
-                <tt>Q</tt>, <tt>V</tt>, and <tt>X</tt>
-                have four holes punched.
+                The code was organized to spread the hole punches around to reduce and even out wear on
+                electromechanical parts. This meant that letters were not in the same order as code points.
+                Note that the letters <tt>E</tt> and <tt>T</tt> require one hole and other common
+                letters like <tt>A</tt>, <tt>O</tt>, <tt>I</tt>, <tt>N</tt>, <tt>S</tt>, <tt>R</tt>,
+                and <tt>L</tt>,  take just two holes. The less common letters <tt>K</tt>, <tt>Q</tt>,
+                <tt>V</tt>, and <tt>X</tt> have four holes punched.
               </p>
 
               <figure class="mw-halign-center" typeof="mw:File/Frame">
@@ -260,23 +267,35 @@
                   <img src="PaperTapes-5and8Hole.jpg" class="mw-file-element" width="500">
                 </a>
                 <figcaption>
-                  Paper tape with 5 and 8 holes. The small holes are for a sprocket and don't hold data. (via Wikimedia Commons)
+                  Punched paper tape with 5 and 8 holes. The small holes are used by a sprocket and
+                  don't hold data. The sprocket holes in 8-hole paper tape are not centered in order to
+                  prevent the paper tape from accidentally being fed upside down. (via Wikimedia Commons)
                 </figcaption>
               </figure>
 
               <p>
-                All zeros (no holes punched) is a Null character while all holes punched indicates a
-                shift to Letters, and also Erase or Delete because punching all the holes is a way to
-                correct errors. These uses have continued ever since.
+                All zeros (no holes punched) is a Null character, while all holes punched indicates a
+                shift to Letters, and also represents Erase or Delete, because punching all the holes
+                is a way to correct errors. These uses continued into the ASCII encoding.
+              </p>
+              <p>
+                Punched paper tape, telegraph character encodings, and other technologies used
+                in telegraphy found use in digital computers.
               </p>
 
               <h2><span class="mw-headline">ASCII</span></h2>
 
               <p>
-                ASCII, first introduced in 1963, was well suited to a world with 8-bit bytes, which were used
-                by IBM's System 360 series in 1964 and then rapidly became universal. On 8-hole punched tape,
-                the 8th bit could be used to store a parity bit for error detection. When stored in memory,
-                where no error detection was needed, the high bit was typically set to zero.
+                ASCII, a 7-bit fixed-width code, was a successor to telegraph code and was first
+                introduced in 1963. ASCII was well suited to a world with 8-bit bytes, which were
+                used by IBM's System 360 series in 1964, then on the 8-bit microprocessors of the
+                1970s, and rapidly became universal. (IBM, however, used a different encoding,
+                EBCDIC, on the 360 for better compatibility with their earlier computers and
+                existing peripherals.)
+              </p>
+              <p>
+                On 8-hole punched paper tape, the 8th bit could be used to store a parity bit for
+                error detection. When stored in memory, the high bit was typically set to zero.
               </p>
 
               <table class="wikitable"
@@ -477,9 +496,9 @@
 
               <p>
                 Microcomputer makers of the 1970s made various ASCII extensions that used the high 128 values
-                of a byte, and sometimes the nonprintable ASCII code points for various purposes like line and
-                box drawing characters for simple graphical user interfaces, accented letters, computer games,
-                etc.
+                of a byte, and sometimes used the nonprintable ASCII code points for various purposes like
+                line and box drawing characters for simple graphical user interfaces, accented letters,
+                computer games, etc.
               </p>
 
               <figure class="mw-halign-center" typeof="mw:File/Frame">
@@ -710,31 +729,38 @@
                 In the original 16-bit Unicode, the first 256 code points were taken from ISO-8859-1.
               </p>
               <p>
-                A 16-bit code still wasn't enough, though, so with Unicode 2.0 in 1996, support was added
-                for over a million code points. Including, these days, various emoji. A &ldquo;code point&rdquo;
-                is often a character, but the standard allows for the use of separate code points with
-                combining characters, such as diacritical marks to add to letters or skin color modifiers
-                to change the appearance of human emojis.
+                A 16-bit code still wasn't enough for all the scripts users wanted to use, so with
+                Unicode 2.0 in 1996, support was added for over a million code points. Including, these days,
+                various emoji. 
+              </p>
+                The first 2<sup>16</sup> (65,536) code points contain the most commonly-used characters,
+                symbols, and combining diacritical marks. This is referred to as the <i>Basic Multilingual Plane</i>
+                (BMP). A further 16 planes are defined, with code points from 0x10000-10ffff.
+              <p>                
+                A &ldquo;code point&rdquo; is often a character, but the standard allows for
+                the use of separate code points with combining characters, such as diacritical marks added
+                to letters or skin color modifiers that change the appearance of human emoji.
               </p>
               <p>
-                Obviously most of these codes are not used in any given document, so it would be hugely
-                wasteful to store the code points themselves.
+                Most of these codes are not used in any given document, so it would be hugely
+                wasteful to use 21 bits per code point to store any value from 0x0 to 0x10ffff.
               </p>
               <p>
                 Instead, various Unicode Transformation Formats were developed, including UTF-8, UTF-16, and
                 UTF-32.
               </p>
               <p>
-                UTF-32 encodes each code point in 32 bits (4 bytes), with at least 11 leading zero bits. This
-                greatly simplifies decoding at the expense of using 4 bytes for each character, no matter
+                UTF-32 simply encodes each code point in 32 bits (4 bytes), with at least 11 leading zero bits.
+                This makes decoding trivial at the expense of using 4 bytes for each character, no matter
                 how common. UTF-16 encodes most commonly-used code points as a single 16-bit value. All other
-                code points are encoded in two 16-bit values. UTF-16 is unpopular. Which brings us to UTF-8.
+                code points are encoded in two 16-bit values from a special range. UTF-16 is unpopular.
+                Which brings us to UTF-8.
               </p>
               <h2><span class="mw-headline">UTF-8</span></h2>
 
               <p>
-                UTF-8, however, is by far the most popular transformation format. It has been implemented in
-                all major operating systems available today. It has various advantages.
+                UTF-8 is by far the most popular Unicode transformation format. It has been implemented
+                in all major operating systems available today. It has various advantages.
                 <ul>
                   <li>It is 100% backward compatible with 7-bit ASCII (the first 128 Unicode code points).</li>
                   <li>It is easy to synchronize by simply examining the high-order bits in a byte stream</li>
@@ -744,22 +770,26 @@
                 Encoding results in sequences of 1 to 4 bytes.
                 <ul>
                   <li>The first 128 code points (corresponding to 7-bit ASCII) use 1 byte.</li>
-                  <li>A further 1,920 code points use 2 bytes.</li>
-                  <li>The remaining 61,440 code points on the &ldquo;Basic Multilingual Plane&rdquo; use 3 bytes.</li>
+                  <li>A further 1,920 code points covering various Latin languages, Greek, Hebrew,
+                      and spacing and combining diacritical marks use 2 bytes.</li>
+                  <li>The remaining 61,440 code points on the BMP use 3 bytes.</li>
                   <li>All other code points require 4 bytes.</li>
                 </ul>
+
                 It does have some minor disadvantages.
                 <ul>
                   <li>As a variable length code it may be necessary to back up or skip forward between
                     1 and 3 bytes to find the first byte of an encoded code point.
                   </li>
-                  <li>It loses efficiency if code points outside the Basic Multilingual Plane are
-                    heavily used. Emojis, as an example, are in this category of code points.
+                  <li>It loses efficiency with higher code points. Emojis, as an example, are outside
+                    the BMP and require 4 bytes to encode. UTF-8 also uses only <sup>248</sup>&#x2044;<sub>256</sub>
+                    byte values, resulting in 3.125% of possible encodings unused.
                   </li>
                   <li>Not all byte sequences are valid UTF-8. Decoders must handle error conditions
                     due to erroneous sequences such as unexpected continuation bytes, lack of an
                     expected continuation byte, sequences that don't decode to valid Unicode
-                    code points, and so on.
+                    code points, etc., typically replacing the error with &#xFFFD;. Some bugs
+                    in UTF-8 decoding of invalid input have resulted in security issues.
                   </li>
                 </ul>
               </p>
@@ -770,7 +800,7 @@
                   <tr>
                     <td colspan="6" style="background:#F8F8F8;font-size:small">
                       <b>
-                        <a class="mw-selflink selflink">Conversion between Code Point and UTF-8</a>
+                        <a class="mw-selflink selflink">Conversion between Unicode Code Point and UTF-8</a>
                       </b>
                     </td>
                   </tr>
@@ -800,6 +830,7 @@
                     <td style="background-color:#CCCCCC;"></td>
                     <td style="background-color:#CCCCCC;"></td>
                   </tr>
+
                   <tr>
                     <td style="background:#F8F8F8;font-size:small">U+0800</td>
                     <td style="background:#F8F8F8;font-size:small">U+ffff</td>
@@ -808,6 +839,7 @@
                     <td><tt>10xxxxxx</tt></td>
                     <td style="background-color:#CCCCCC;"></td>
                   </tr>
+
                   <tr>
                     <td style="background:#F8F8F8;font-size:small">U+10000</td>
                     <td style="background:#F8F8F8;font-size:small">U+10ffff</td>
@@ -828,29 +860,29 @@
               </table>
 
               <p>
-                Bits are stored highest to lowest, with leading zeros if needed.
-                The first UTF-8 byte has the highest bits in the code point
+                Code point bits appear highest to lowest in UTF-8, with leading zeros
+                if needed.  The first UTF-8 byte has the highest bits in the code point
                 and the last UTF-8 byte contains the lowest bits.</a>
               </p>
               <p>
-                When encoding Unicode code points to UTF-8, the encoder just checks
-                which of the four UTF-8 encodings to use based on the code point value.
+                When encoding Unicode to UTF-8, the encoder just checks which of the four
+                UTF-8 encodings to use based on the code point value.
               </p>
               <p>
-                When decoding UTF-8 to Unicode code points, the decoder knows what to do
+                When decoding UTF-8 to Unicode, the decoder knows what to do
                 by simply looking at the most significant bits in a UTF-8 byte.
               </p>
 
               <h2><span class="mw-headline">References</span></h2>
               <p>
-                Most of this content was from various Wikipedia pages.<br>
+                Most of this content was from various Wikipedia pages, including<br>
                 <a href="https://en.wikipedia.org/wiki/ASCII">https://en.wikipedia.org/wiki/ASCII</a><br>
                 <a href="https://en.wikipedia.org/wiki/UTF-8">https://en.wikipedia.org/wiki/Byte</a><br>
-                <a href="https://en.wikipedia.org/wiki/Optical_telegraph">https://en.wikipedia.org/wiki/Optical_telegraph</a>
                 <a href="https://en.wikipedia.org/wiki/Punched_tape">https://en.wikipedia.org/wiki/Punched_tape</a><br>
                 <a href="https://en.wikipedia.org/wiki/Telegraph">https://en.wikipedia.org/wiki/Telegraph</a><br>
                 <a href="https://en.wikipedia.org/wiki/Unicode">https://en.wikipedia.org/wiki/Unicode</a><br>
-                <a href="https://en.wikipedia.org/wiki/UTF-8">https://en.wikipedia.org/wiki/UTF-8</a>
+                <a href="https://en.wikipedia.org/wiki/UTF-8">https://en.wikipedia.org/wiki/UTF-8</a><br>
+                See also <a href="https://www.itu.int/rec/R-REC-M.1677-1-200910-I/">https://www.itu.int/rec/R-REC-M.1677-1-200910-I/</a>
               </p>
             </div>
           </div>
