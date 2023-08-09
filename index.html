@@ -5,6 +5,8 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>Character Encodings</title>
   <link rel="stylesheet"  href="char_table.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
 
 <body class="skin-vector skin-vector-search-vue mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Control_Pictures rootpage-Control_Pictures skin-vector-2022 action-view uls-dialog-sticky-hide vector-below-page-title">
@@ -237,10 +239,10 @@
               </p>
 
               <p>
-                The ITA 2 standard used a 5-bit encoding. But since 5 bits aren't enough for all the
-                characters users wanted, two &ldquo;control codes&rdquo; were used that shifted
-                between &ldquo;Letters&rdquo; and &ldquo;Figures&rdquo;. Other control
-                codes performed operations on the receiving teletype like &ldquo;carriage
+                The ITA 2 standard used a 5-bit encoding, allowing 32 distinct values, or <i>code points</i>.
+                But since 5 bits aren&rsquo;t enough for all the characters users wanted, two &ldquo;control
+                codes&rdquo; were used that shifted between &ldquo;Letters&rdquo; and &ldquo;Figures&rdquo;.
+                Other control codes performed operations on the receiving teletype like &ldquo;carriage
                 return&rdquo; and &ldquo;line feed&rdquo;, which may sound familiar.
               </p>
 
@@ -287,11 +289,16 @@
 
               <p>
                 ASCII, a 7-bit fixed-width code, was a successor to telegraph code and was first
-                introduced in 1963. ASCII was well suited to a world with 8-bit bytes, which were
-                used by IBM's System 360 series in 1964, then on the 8-bit microprocessors of the
-                1970s, and rapidly became universal. (IBM, however, used a different encoding,
-                EBCDIC, on the 360 for better compatibility with their earlier computers and
-                existing peripherals.)
+                introduced in 1963. The following year, IBM introduced the successful and highly
+                influential System/360 line of computers.
+              </p>
+              <p>
+                System/360 used 8-bit bytes, replacing a variety of byte and word sizes in earlier
+                computers. The 8-bit byte was also used on 8-bit microprocessors of the 1970s, and
+                the meaning of &ldquo;byte&rdquo; as an 8-bit quantity became universal by the mid-1970s.
+                ASCII was well suited to a world with 8-bit bytes. (IBM, however, used a different
+                encoding, EBCDIC, on the S/360 for better compatibility with their earlier computers
+                and existing peripherals.)
               </p>
               <p>
                 On 8-hole punched paper tape, the 8th bit could be used to store a parity bit for
@@ -513,7 +520,7 @@
               <p>
                 In 1987 ISO attempted to standardize some of this. That resulted in ISO/IEC 8859-1 (Usually shortened
                 to ISO-8859-1) and other similar character sets, including Windows-1252. These added support for
-                various western languages' accented characters and punctuation.
+                various western languages&rsquo; accented characters and punctuation.
               </p>
 
               <table class="wikitable"
@@ -729,21 +736,21 @@
                 In the original 16-bit Unicode, the first 256 code points were taken from ISO-8859-1.
               </p>
               <p>
-                A 16-bit code still wasn't enough for all the scripts users wanted to use, so with
+                A 16-bit code still wasn&rsquo;t enough for all the scripts users wanted to use, so with
                 Unicode 2.0 in 1996, support was added for over a million code points. Including, these days,
                 various emoji. 
               </p>
                 The first 2<sup>16</sup> (65,536) code points contain the most commonly-used characters,
                 symbols, and combining diacritical marks. This is referred to as the <i>Basic Multilingual Plane</i>
                 (BMP). A further 16 planes are defined, with code points from 0x10000-10ffff.
-              <p>                
-                A &ldquo;code point&rdquo; is often a character, but the standard allows for
+              <p>
+                A Unicode code point is often a character, but the standard allows for
                 the use of separate code points with combining characters, such as diacritical marks added
                 to letters or skin color modifiers that change the appearance of human emoji.
               </p>
               <p>
                 Most of these codes are not used in any given document, so it would be hugely
-                wasteful to use 21 bits per code point to store any value from 0x0 to 0x10ffff.
+                wasteful to use 21 bits per code point to store an arbitrary value from 0x0 to 0x10ffff.
               </p>
               <p>
                 Instead, various Unicode Transformation Formats were developed, including UTF-8, UTF-16, and
@@ -752,18 +759,32 @@
               <p>
                 UTF-32 simply encodes each code point in 32 bits (4 bytes), with at least 11 leading zero bits.
                 This makes decoding trivial at the expense of using 4 bytes for each character, no matter
-                how common. UTF-16 encodes code points in the BMP as a single 16-bit value. All other
-                code points are encoded in two 16-bit values from a special range. UTF-16 is unpopular.
+                how common. UTF-16 encodes all code points in the BMP as a single 16-bit value. All other
+                code points are encoded in two 16-bit values, called high and low surrogates, from a special
+                range. UTF-16 is unpopular. UTF-16 is a successor to &ldquo;UCS-2&rdquo;, the encoding for
+                the earlier, 16-bit Unicode
+                that used exactly 16 bits for each character, with no ability to represent code points
+                outside the BMP. UCS-2 and UTF-32 are also known as &ldquo;wide character encodings&rdquo;
+                because they use a fixed length code to represent code points.
+              </p>
+              <p>
                 Which brings us to UTF-8.
               </p>
               <h2><span class="mw-headline">UTF-8</span></h2>
 
               <p>
+                UTF-8 is, like UTF-16 and other encodings, a multibyte character encoding. It was developed
+                in 1992 by Ken Thompson and Rob Pike for their Plan 9 operating system.
+              </p>
+              <p>
                 UTF-8 is by far the most popular Unicode transformation format. It has been implemented
                 in all major operating systems available today. It has various advantages.
                 <ul>
                   <li>It is 100% backward compatible with 7-bit ASCII (the first 128 Unicode code points).</li>
-                  <li>It is easy to synchronize by simply examining the high-order bits in a byte stream</li>
+                  <li>It is easy to synchronize by simply examining the high-order bits in a byte stream
+                    without losing any more than a single partial code point.</li>
+                  <li>It does not depend on the host&rsquo;s byte order because the format consists solely
+                    of a sequence of bytes.</li>
                   <li>Encoding and decoding are relatively straightforward.</li>
                 </ul>
 
@@ -778,17 +799,17 @@
 
                 It does have some minor disadvantages.
                 <ul>
-                  <li>As a variable length code it may be necessary to back up or skip forward between
-                    1 and 3 bytes to find the first byte of an encoded code point.
+                  <li>The ability to easily distinguish between the initial byte and subsequent bytes
+                    allows fewer code points to be encoded in 2 and 3 bytes, reducing efficiency.
+                    Emojis, as an example, are outside the BMP and require 4 bytes to encode.
                   </li>
-                  <li>It loses efficiency with higher code points. Emojis, as an example, are outside
-                    the BMP and require 4 bytes to encode. UTF-8 also uses only <sup>248</sup>&#x2044;<sub>256</sub>
-                    byte values, resulting in 3.125% of possible encodings unused.
+                  <li>UTF-8 uses only <sup>248</sup>&#x2044;<sub>256</sub> byte values, resulting in
+                    3.125% of possible encodings (<tt>0x11111000</tt> through <tt>0x11111111</tt>) unused.
                   </li>
                   <li>Not all byte sequences are valid UTF-8. Decoders must handle error conditions
                     due to erroneous sequences such as unexpected continuation bytes, lack of an
-                    expected continuation byte, sequences that don't decode to valid Unicode
-                    code points, etc., typically replacing the error with &#xFFFD;. Some bugs
+                    expected continuation byte, sequences that don&rsquo;t decode to valid Unicode
+                    code points, etc., typically replacing the error with &ldquo;&#xFFFD;&rdquo;. Some bugs
                     in UTF-8 decoding of invalid input have resulted in security issues.
                   </li>
                 </ul>
@@ -852,18 +873,15 @@
                   <tr>
                     <td colspan="6" style="background:#F8F8F8;font-size:small;text-align:left">
                       <dl>
-                        <dd>&nbsp;</dd>
+                        <dd>Code point bits appear highest to lowest in UTF-8, with leading zeros
+                          if needed.  The first UTF-8 byte has the highest bits in the code point
+                          and the last UTF-8 byte contains the lowest bits.</dd>
                       </dl>
                     </td>
                   </tr>
                 </tbody>
               </table>
 
-              <p>
-                Code point bits appear highest to lowest in UTF-8, with leading zeros
-                if needed.  The first UTF-8 byte has the highest bits in the code point
-                and the last UTF-8 byte contains the lowest bits.</a>
-              </p>
               <p>
                 When encoding Unicode to UTF-8, the encoder just checks which of the four
                 UTF-8 encodings to use based on the code point value.
@@ -882,7 +900,9 @@
                 <a href="https://en.wikipedia.org/wiki/Telegraph">https://en.wikipedia.org/wiki/Telegraph</a><br>
                 <a href="https://en.wikipedia.org/wiki/Unicode">https://en.wikipedia.org/wiki/Unicode</a><br>
                 <a href="https://en.wikipedia.org/wiki/UTF-8">https://en.wikipedia.org/wiki/UTF-8</a><br>
-                See also <a href="https://www.itu.int/rec/R-REC-M.1677-1-200910-I/">https://www.itu.int/rec/R-REC-M.1677-1-200910-I/</a>
+                Other references<br>
+                <a href="https://www.itu.int/rec/R-REC-M.1677-1-200910-I/">https://www.itu.int/rec/R-REC-M.1677-1-200910-I/</a><br>
+                <a href="https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/">https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/</a>
               </p>
             </div>
           </div>

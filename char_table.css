@@ -437,8 +437,6 @@ ol.references li:target, sup.reference:target { background-color: rgb(234, 243, 
 
 .badge-digitaldocument { list-style-image: url("/w/extensions/WikimediaBadges/resources/images/badge-digitaldocument.png?d1c50"); }
 
-.vector-icon.mw-ui-icon-wikimedia-bell { background-image: url("/w/load.php?modules=3Dskins.vector.icons&image=3Dbell&format=3Doriginal&skin=3Dvector-2022&version=3Dob37q"); }
-
 .vector-icon.mw-ui-icon-wikimedia-bell-progressive { background-image: url("/w/load.php?modules=3Dskins.vector.icons&image=3Dbell&variant=3Dprogressive&format=3Doriginal&skin=3Dvector-2022&version=3Dob37q"); }
 
 .vector-icon.mw-ui-icon-wikimedia-tray { background-image: url("/w/load.php?modules=3Dskins.vector.icons&image=3Dtray&format=3Doriginal&skin=3Dvector-2022&version=3Dob37q"); }
@@ -668,7 +666,6 @@ figure[typeof~="mw:File/Thumb"] > figcaption:empty { padding-bottom: 3px; }
   :focus { outline-color: rgb(51, 102, 204); }
   html { font-size: 100%; }
   html, body { font-family: sans-serif; }
-  ul { list-style-image: url("/w/skins/Vector/resources/common/images/bullet-icon.svg?d4515"); }
   pre, .mw-code { line-height: 1.3; }
   .mw-jump-link:not(:focus) { display: block; clip: rect(1px, 1px, 1px, 1px); width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; user-select: none; position: absolute !important; }
   .mw-editsection, .mw-editsection-like { font-family: sans-serif; }
