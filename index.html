@@ -3,7 +3,7 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Character Encodings</title>
+  <title>Character Encodings: ASCII, Unicode, and UTF-8</title>
   <link rel="stylesheet"  href="char_table.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
@@ -53,11 +53,37 @@
                 in most cases the messages were simple or distances were short, or both. More capable
                 systems were developed and deployed as technology permitted. Notably, the Chappe
                 optical telegraph, operated in France starting in the 1790s, used a rooftop apparatus
-                viewed from afar with a telescope and could transmit 98 distinct symbols. These were
-                used to code entire words by using two symbols, one to choose a code book page and another
-                to choose a word on that page.
+                viewed from afar with a telescope. The encoding permitted 92 data symbols (plus some
+                additional control symbols) to be transmitted. Each word was coded using two symbols,
+                one to choose a page in a code book and the other to choose a word on that page.
               </p>
-              <p>
+
+              <figure class="mw-halign-left" typeof="mw:File/Frame">
+                <a href="" class="mw-file-description">
+                  <img src="530px-Chappe_semaphore.jpg" class="mw-file-element" width="265">
+                </a>
+                <figcaption>
+                  Chappe optical telegraph station<br>
+                  By Unknown author - 19th century painting . Photographed in Musee des Arts et Metiers, Public Domain,
+                  <a href="https://commons.wikimedia.org/w/index.php?curid=4676438">Link</a>
+                </figcaption>
+              </figure>
+
+              <figure class="mw-halign-center" typeof="mw:File/Frame">
+                <a href="" class="mw-file-description">
+                  <img src="1088px-Chappe_code_-_c._1809.svg.png" class="mw-file-element" width="450">
+                </a>
+                <figcaption>
+                Optical telegraph codes<br>
+                By Courtesy
+                <a class="external text" href="https://en.wikipedia.org/wiki/User:Spinningspark">
+                Spinningspark at Wikipedia
+                </a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-ShareAlike 3.0">CC BY-SA 3.0</a>, <a href="https://en.wikipedia.org/w/index.php?curid=61856468">Link</a>
+                </figcaption>
+              </figure>
+
+
+              <p style="clear:both">
                 Inventors had, from time to time, proposed telegraph systems that
                 encoded individual characters to send arbitrary messages, but the first commercially successful system
                 was the electrical telegraph by the American innovators Samuel Morse and Alfred Vail.
@@ -221,7 +247,8 @@
                   <img src="640px-Wallace_Study-Telegraph.jpg" class="mw-file-element" width="500">
                 </a>
                 <figcaption>
-                  Morse telegraph key (Hp.Baumeler, CC BY-SA 4.0, via Wikimedia Commons)
+                  Morse telegraph key<br>
+                  By <a href="//commons.wikimedia.org/wiki/User:Jeunamateur" title="User:Jeunamateur">Jeunamateur</a> - <span class="int-own-work" lang="en">Own work</span> d&#039;après "La télégraphie Chappe", FNHAR, 1993, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=19700042">Link</a>
                 </figcaption>
               </figure>
 
@@ -251,7 +278,18 @@
                   <img src="International_Telegraph_Alphabet_2_brightened.jpg" class="mw-file-element" width="779">
                 </a>
                 <figcaption>
-                  A British version of ITU-2 (User:Huestones with derivative work by User:TedColes, CC BY-SA 3.0 via Wikimedia Commons)
+                  A British version of ITA 2<br>
+                  By <a href="//commons.wikimedia.org/w/index.php?title=User:Huestones&amp;action=edit&amp"
+                  title="User:Huestones (page does not exist)">User:Huestones</a>
+                  with derivative work by
+                  <a href="//commons.wikimedia.org/wiki/User:TedColes" title="User:TedColes">User:TedColes</a>
+                  - Old version of
+                  <a href="//commons.wikimedia.org/wiki/File:International_Telegraph_Alphabet_2.jpg"
+                  title="File:International Telegraph Alphabet 2.jpg">File:International Telegraph Alphabet 2.jpg</a>,
+                  <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">
+                  CC BY-SA 3.0
+                  </a>,
+                  <a href="https://commons.wikimedia.org/w/index.php?curid=82195717">Link</a>
                 </figcaption>
               </figure>
 
@@ -271,7 +309,8 @@
                 <figcaption>
                   Punched paper tape with 5 and 8 holes. The small holes are used by a sprocket and
                   don&rsquo;t hold data. The sprocket holes in 8-hole paper tape are not centered in order to
-                  prevent the paper tape from accidentally being fed upside down. (via Wikimedia Commons)
+                  prevent the paper tape from accidentally being fed upside down.<br>
+                  By TedColes - <span class="int-own-work" lang="en">Own work</span>, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=11736857">Link</a>
                 </figcaption>
               </figure>
 
@@ -289,8 +328,10 @@
 
               <p>
                 ASCII, a 7-bit fixed-width code first introduced in 1963, was developed as a successor
-                to telegraph code. The following year, IBM introduced the successful and highly
-                influential System/360 line of computers.
+                to telegraph code and a standardized replacement for the wide variety of character
+                encodings used by computers and other data processing equipment.
+                The following year, IBM introduced the successful and highly influential System/360
+                line of computers.
               </p>
               <p>
                 System/360 used 8-bit bytes, replacing a variety of byte and word sizes in earlier
@@ -299,6 +340,12 @@
                 ASCII was well suited to a world with 8-bit bytes. (IBM, however, used a different
                 encoding, EBCDIC, on the S/360 for better compatibility with their earlier computers
                 and existing peripherals.)
+              </p>
+              <p>
+                ASCII placed digits, upper case letters, lower case letters, and symbols in
+                order for ease of comparison and sorting and positioned to make
+                operations such as converting between upper and lower case or converting
+                between a digit character and its numeric value a simple bitwise operation.
               </p>
               <p>
                 On 8-hole punched paper tape, the 8th bit could be used to store a parity bit for
@@ -513,7 +560,10 @@
                   <img src="Codepage-437.png" class="mw-file-element" width="304">
                 </a>
                 <figcaption>
-                  IBM Personal Computer character set introduced in 1981. Includes smileys, playing card suits, etc. (via Wikimedia Commons)
+                  IBM Personal Computer character set introduced in 1981. Includes smileys, playing card suits, etc.<br>
+                  By <a href="https://en.wikipedia.org/wiki/User:MattGiuca" class="extiw" title="en:User:MattGiuca">MattGiuca</a>
+                  - Created on <a href="https://en.wikipedia.org/wiki/QEMU" class="extiw" title="w:QEMU">QEMU</a>.,
+                  Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=10573855">Link</a>
                 </figcaption>
               </figure>
 
@@ -522,8 +572,9 @@
                   <img src="msdos-char-graphics-1.jpg" class="mw-file-element" width="450">
                 </a>
                 <figcaption>
-                  MS-DOS application that uses the IBM PC box drawing characters to implement
-                  a user interface (original work, June 2, 2018)
+                  MS-DOS application that uses box drawing characters for
+                  a user interface.<br>
+                  By Author, June 2, 2018.
                 </figcaption>
               </figure>
 
@@ -973,7 +1024,8 @@
                 <a href="https://en.wikipedia.org/wiki/UTF-8">https://en.wikipedia.org/wiki/UTF-8</a><br>
                 Other references<br>
                 <a href="https://www.itu.int/rec/R-REC-M.1677-1-200910-I/">https://www.itu.int/rec/R-REC-M.1677-1-200910-I/</a><br>
-                <a href="https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/">https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/</a>
+                <a href="https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/">https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/</a><br>
+                <a href="https://doi.org/10.1145/367487.367493">Survey of coded character representation, Bemer, R. W., Commun. ACM, Dec. 1960</a>
               </p>
             </div>
           </div>
