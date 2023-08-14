@@ -89,14 +89,14 @@
                 was the electrical telegraph by the American innovators Samuel Morse and Alfred Vail.
                 Unlike most earlier systems, it used only a single wire between stations. In 1844
                 their system connected Baltimore and Washington, and by 1861 the system reached the
-                west coast.
+                west coast. To send messages on their telegraph, Morse and Vail developed Morse code.
               </p>
 
               <h2><span class="mw-headline">Morse Code</span></h2>
               <p>
-                Morse code was developed by Morse and Vail and encoded individual
-                characters. The codes were chosen based on the frequency of letters in English
-                text, estimated by the relative letter counts in the type-cases of a newspaper.
+                Morse code, introduced in 1844, encoded individual characters. The codes were chosen
+                based on the frequency of letters in English text, estimated by the relative letter
+                counts in the type-cases of a newspaper.
               </p>
               <table class="wikitable"
                 style="border-collapse:collapse;background:#FFFFFF;font-size:large;text-align:center">
@@ -242,13 +242,27 @@
                 </tbody>
               </table>
 
+              <p style="clear:both">
+                Morse code is still used in amateur radio, but it is obsolete, or nearly so, otherwise.
+              </p>
+
               <figure class="mw-halign-left" typeof="mw:File/Frame">
                 <a href="" class="mw-file-description">
-                  <img src="640px-Wallace_Study-Telegraph.jpg" class="mw-file-element" width="500">
+                  <img src="640px-Wallace_Study-Telegraph.jpg" class="mw-file-element" width="400">
                 </a>
                 <figcaption>
                   Morse telegraph key<br>
                   By <a href="//commons.wikimedia.org/wiki/User:Jeunamateur" title="User:Jeunamateur">Jeunamateur</a> - <span class="int-own-work" lang="en">Own work</span> d&#039;après "La télégraphie Chappe", FNHAR, 1993, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=19700042">Link</a>
+                </figcaption>
+              </figure>
+
+              <figure class="mw-halign-center" typeof="mw:File/Frame">
+                <a href="" class="mw-file-description">
+                  <img src="W1AW.JPG" class="mw-file-element" width="400">
+                </a>
+                <figcaption>
+                  Flagship amateur radio station W1AW broadcasts messages in Morse code.<br>
+                  By Author, August 17, 2017.
                 </figcaption>
               </figure>
 
@@ -897,6 +911,17 @@
                 in 1992 by Ken Thompson and Rob Pike for their Plan 9 operating system.
               </p>
               <p>
+                Encoding generates sequences of 1 to 4 bytes for each code point.
+                <ul>
+                  <li>The first 128 code points (corresponding to 7-bit ASCII) use 1 byte.</li>
+                  <li>A further 1,920 code points covering various Latin languages, Greek, Hebrew,
+                      and spacing and combining diacritical marks use 2 bytes.</li>
+                  <li>The remaining 61,440 code points on the BMP use 3 bytes.</li>
+                  <li>All other code points require 4 bytes.</li>
+                </ul>
+              </p>
+
+              <p>
                 UTF-8 is by far the most popular Unicode transformation format. It has been implemented
                 in all major operating systems available today. It has various advantages.
                 <ul>
@@ -906,15 +931,6 @@
                   <li>It does not depend on the host&rsquo;s byte order because the format consists solely
                     of a sequence of bytes.</li>
                   <li>Encoding and decoding can be done easily, with simple bit operations.</li>
-                </ul>
-
-                Encoding results in sequences of 1 to 4 bytes.
-                <ul>
-                  <li>The first 128 code points (corresponding to 7-bit ASCII) use 1 byte.</li>
-                  <li>A further 1,920 code points covering various Latin languages, Greek, Hebrew,
-                      and spacing and combining diacritical marks use 2 bytes.</li>
-                  <li>The remaining 61,440 code points on the BMP use 3 bytes.</li>
-                  <li>All other code points require 4 bytes.</li>
                 </ul>
 
                 It does have some minor disadvantages.
@@ -932,7 +948,9 @@
                     due to erroneous sequences such as unexpected continuation bytes, lack of an
                     expected continuation byte, sequences that don&rsquo;t decode to valid Unicode
                     code points, etc., typically replacing the error with &ldquo;&#xFFFD;&rdquo;. Some bugs
-                    in UTF-8 decoding of invalid input have resulted in security issues.
+                    in UTF-8 decoding of invalid input have resulted in security issues. For example
+                    an attacker might insert an invalid sequence that prevents a validator from detecting
+                    a disallowed ASCII character that permits code injection.
                   </li>
                 </ul>
               </p>
